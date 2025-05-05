@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+
+.btn{
+    /* background-color: #0D9488; */
+    background-color: #2563EB;
+}

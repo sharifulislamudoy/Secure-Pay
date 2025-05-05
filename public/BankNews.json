@@ -1,0 +1,87 @@
+[
+    {
+      "id": "news001",
+      "headline": "Bangladesh Bank Cuts Interest Rates to Boost Economy",
+      "description": "In a move to stimulate economic activity, Bangladesh Bank has announced a reduction in policy interest rates effective from June.",
+      "views": 1350,
+      "publishedDate": "2025-05-04"
+    },
+    {
+      "id": "news002",
+      "headline": "City Bank Launches New Digital Banking Platform",
+      "description": "City Bank unveiled its latest digital banking interface, aimed at improving user experience and security for online transactions.",
+      "views": 980,
+      "publishedDate": "2025-05-02"
+    },
+    {
+      "id": "news003",
+      "headline": "IFIC Bank Reports 20% Growth in Quarterly Profits",
+      "description": "IFIC Bank's Q1 financial report shows a significant increase in profit due to strong investment returns and customer deposits.",
+      "views": 725,
+      "publishedDate": "2025-04-28"
+    },
+    {
+      "id": "news004",
+      "headline": "Mobile Banking Transactions Hit Record High",
+      "description": "Recent data shows mobile banking in Bangladesh crossed BDT 1 trillion in transactions last month, marking a new milestone.",
+      "views": 2100,
+      "publishedDate": "2025-04-25"
+    },
+    {
+      "id": "news005",
+      "headline": "Dutch-Bangla Bank Introduces Contactless ATM Cards",
+      "description": "Dutch-Bangla Bank has launched contactless debit cards for safer and faster ATM transactions across the country.",
+      "views": 650,
+      "publishedDate": "2025-04-20"
+    },
+    {
+      "id": "news006",
+      "headline": "BRAC Bank Opens New Branch in Chittagong",
+      "description": "BRAC Bank expands its presence in the port city by opening a state-of-the-art branch in Agrabad.",
+      "views": 432,
+      "publishedDate": "2025-04-18"
+    },
+    {
+      "id": "news007",
+      "headline": "Online Account Opening Feature Launched by Eastern Bank",
+      "description": "Eastern Bank customers can now open savings and current accounts directly from the bank's mobile app.",
+      "views": 788,
+      "publishedDate": "2025-04-15"
+    },
+    {
+      "id": "news008",
+      "headline": "Bank Asia Implements AI for Fraud Detection",
+      "description": "Bank Asia has deployed artificial intelligence systems to detect and prevent fraudulent activities in real-time.",
+      "views": 1123,
+      "publishedDate": "2025-04-12"
+    },
+    {
+      "id": "news009",
+      "headline": "Prime Bank Launches Green Loan for Solar Projects",
+      "description": "Prime Bank introduced an eco-friendly financing option for homeowners installing rooftop solar panels.",
+      "views": 367,
+      "publishedDate": "2025-04-10"
+    },
+    {
+      "id": "news010",
+      "headline": "Mutual Trust Bank Hosts Financial Literacy Program",
+      "description": "MTB conducted workshops across rural areas to promote awareness of savings, credit, and digital payments.",
+      "views": 594,
+      "publishedDate": "2025-04-08"
+    },
+    {
+      "id": "news011",
+      "headline": "Bangladesh Bank Increases Cash Reserve Ratio",
+      "description": "To curb inflation, the central bank has raised the cash reserve ratio (CRR) for scheduled banks by 0.5%.",
+      "views": 810,
+      "publishedDate": "2025-04-04"
+    },
+    {
+      "id": "news012",
+      "headline": "Islami Bank Launches Shariah-Based Investment App",
+      "description": "The bank's new app offers customers a fully digital platform for halal investment products and portfolio tracking.",
+      "views": 678,
+      "publishedDate": "2025-04-01"
+    }
+  ]
+  

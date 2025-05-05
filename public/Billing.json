@@ -1,0 +1,273 @@
+[
+    {
+      "id": "1",
+      "category": "Electricity",
+      "description": "Residential electricity bill - April",
+      "amount": 1250,
+      "icon": "https://i.ibb.co.com/mrydSBZZ/Electricity-Bill.png",
+      "organization": "DESCO",
+      "dueDate": "2025-05-15"
+    },
+    {
+      "id": "2",
+      "category": "Water",
+      "description": "Monthly water bill - April",
+      "amount": 300,
+      "icon": "https://i.ibb.co.com/21d12dg5/Water-Bill.png",
+      "organization": "WASA",
+      "dueDate": "2025-05-12"
+    },
+    {
+      "id": "3",
+      "category": "Gas",
+      "description": "Residential gas bill",
+      "amount": 850,
+      "icon": "https://i.ibb.co.com/xK4W2qfr/Gas-Bill.png",
+      "organization": "TITAS",
+      "dueDate": "2025-05-10"
+    },
+    {
+      "id": "4",
+      "category": "Internet",
+      "description": "Home broadband internet",
+      "amount": 1000,
+      "icon": "https://i.ibb.co.com/4wnsyFZY/Internet-Bill.png",
+      "organization": "Link3",
+      "dueDate": "2025-05-05"
+    },
+    {
+      "id": "5",
+      "category": "Mobile Recharge",
+      "description": "GP prepaid mobile recharge",
+      "amount": 200,
+      "icon": "https://i.ibb.co.com/nsbjxKZp/Mobile-Recharge.png",
+      "organization": "Grameenphone",
+      "dueDate": "2025-05-06"
+    },
+    {
+      "id": "6",
+      "category": "Credit Card Bill",
+      "description": "April credit card bill",
+      "amount": 4550,
+      "icon": "https://i.ibb.co.com/JRkwyrp5/Credit-Card-Bill.png",
+      "organization": "City Bank",
+      "dueDate": "2025-05-20"
+    },
+    {
+      "id": "7",
+      "category": "Electricity",
+      "description": "Commercial unit - electricity",
+      "amount": 3400,
+      "icon": "https://i.ibb.co.com/mrydSBZZ/Electricity-Bill.png",
+      "organization": "PDB",
+      "dueDate": "2025-05-18"
+    },
+    {
+      "id": "8",
+      "category": "Water",
+      "description": "Factory water usage",
+      "amount": 1200,
+      "icon": "https://i.ibb.co.com/21d12dg5/Water-Bill.png",
+      "organization": "WASA",
+      "dueDate": "2025-05-09"
+    },
+    {
+      "id": "9",
+      "category": "Gas",
+      "description": "Restaurant gas bill",
+      "amount": 1750,
+      "icon": "https://i.ibb.co.com/xK4W2qfr/Gas-Bill.png",
+      "organization": "TITAS",
+      "dueDate": "2025-05-13"
+    },
+    {
+      "id": "10",
+      "category": "Internet",
+      "description": "Corporate internet - monthly",
+      "amount": 2500,
+      "icon": "https://i.ibb.co.com/4wnsyFZY/Internet-Bill.png",
+      "organization": "Carnival",
+      "dueDate": "2025-05-07"
+    },
+    {
+      "id": "11",
+      "category": "Mobile Recharge",
+      "description": "Robi monthly top-up",
+      "amount": 300,
+      "icon": "https://i.ibb.co.com/nsbjxKZp/Mobile-Recharge.png",
+      "organization": "Robi",
+      "dueDate": "2025-05-08"
+    },
+    {
+      "id": "12",
+      "category": "Credit Card Bill",
+      "description": "Credit card EMI payment",
+      "amount": 2700,
+      "icon": "https://i.ibb.co.com/JRkwyrp5/Credit-Card-Bill.png",
+      "organization": "Standard Chartered",
+      "dueDate": "2025-05-21"
+    },
+    {
+      "id": "13",
+      "category": "Electricity",
+      "description": "Office electricity usage",
+      "amount": 4600,
+      "icon": "https://i.ibb.co.com/mrydSBZZ/Electricity-Bill.png",
+      "organization": "NESCO",
+      "dueDate": "2025-05-11"
+    },
+    {
+      "id": "14",
+      "category": "Water",
+      "description": "Warehouse water bill",
+      "amount": 500,
+      "icon": "https://i.ibb.co.com/21d12dg5/Water-Bill.png",
+      "organization": "WASA",
+      "dueDate": "2025-05-13"
+    },
+    {
+      "id": "15",
+      "category": "Gas",
+      "description": "Monthly home gas bill",
+      "amount": 780,
+      "icon": "https://i.ibb.co.com/xK4W2qfr/Gas-Bill.png",
+      "organization": "TITAS",
+      "dueDate": "2025-05-14"
+    },
+    {
+      "id": "16",
+      "category": "Internet",
+      "description": "Shared home internet",
+      "amount": 1200,
+      "icon": "https://i.ibb.co.com/4wnsyFZY/Internet-Bill.png",
+      "organization": "Banglalion",
+      "dueDate": "2025-05-05"
+    },
+    {
+      "id": "17",
+      "category": "Mobile Recharge",
+      "description": "Airtel recharge for student SIM",
+      "amount": 150,
+      "icon": "https://i.ibb.co.com/nsbjxKZp/Mobile-Recharge.png",
+      "organization": "Airtel",
+      "dueDate": "2025-05-06"
+    },
+    {
+      "id": "18",
+      "category": "Credit Card Bill",
+      "description": "VISA payment - groceries",
+      "amount": 1900,
+      "icon": "https://i.ibb.co.com/JRkwyrp5/Credit-Card-Bill.png",
+      "organization": "DBBL",
+      "dueDate": "2025-05-22"
+    },
+    {
+      "id": "19",
+      "category": "Electricity",
+      "description": "Electricity - May advance",
+      "amount": 1300,
+      "icon": "https://i.ibb.co.com/mrydSBZZ/Electricity-Bill.png",
+      "organization": "DESCO",
+      "dueDate": "2025-05-30"
+    },
+    {
+      "id": "20",
+      "category": "Water",
+      "description": "Community supply water bill",
+      "amount": 250,
+      "icon": "https://i.ibb.co.com/21d12dg5/Water-Bill.png",
+      "organization": "WASA",
+      "dueDate": "2025-05-17"
+    },
+    {
+      "id": "21",
+      "category": "Gas",
+      "description": "Backup cylinder charge",
+      "amount": 950,
+      "icon": "https://i.ibb.co.com/xK4W2qfr/Gas-Bill.png",
+      "organization": "TITAS",
+      "dueDate": "2025-05-10"
+    },
+    {
+      "id": "22",
+      "category": "Internet",
+      "description": "Unlimited monthly internet",
+      "amount": 1800,
+      "icon": "https://i.ibb.co.com/4wnsyFZY/Internet-Bill.png",
+      "organization": "Amber IT",
+      "dueDate": "2025-05-12"
+    },
+    {
+      "id": "23",
+      "category": "Mobile Recharge",
+      "description": "Banglalink data pack recharge",
+      "amount": 120,
+      "icon": "https://i.ibb.co.com/nsbjxKZp/Mobile-Recharge.png",
+      "organization": "Banglalink",
+      "dueDate": "2025-05-04"
+    },
+    {
+      "id": "24",
+      "category": "Credit Card Bill",
+      "description": "MasterCard installment",
+      "amount": 3100,
+      "icon": "https://i.ibb.co.com/JRkwyrp5/Credit-Card-Bill.png",
+      "organization": "HSBC",
+      "dueDate": "2025-05-24"
+    },
+    {
+      "id": "25",
+      "category": "Electricity",
+      "description": "Backup generator usage",
+      "amount": 2300,
+      "icon": "https://i.ibb.co.com/mrydSBZZ/Electricity-Bill.png",
+      "organization": "PDB",
+      "dueDate": "2025-05-16"
+    },
+    {
+      "id": "26",
+      "category": "Water",
+      "description": "Summer usage extra water",
+      "amount": 390,
+      "icon": "https://i.ibb.co.com/21d12dg5/Water-Bill.png",
+      "organization": "WASA",
+      "dueDate": "2025-05-14"
+    },
+    {
+      "id": "27",
+      "category": "Gas",
+      "description": "Emergency gas repair fee",
+      "amount": 600,
+      "icon": "https://i.ibb.co.com/xK4W2qfr/Gas-Bill.png",
+      "organization": "TITAS",
+      "dueDate": "2025-05-15"
+    },
+    {
+      "id": "28",
+      "category": "Internet",
+      "description": "Streaming pack upgrade",
+      "amount": 2200,
+      "icon": "https://i.ibb.co.com/4wnsyFZY/Internet-Bill.png",
+      "organization": "Dot Internet",
+      "dueDate": "2025-05-11"
+    },
+    {
+      "id": "29",
+      "category": "Mobile Recharge",
+      "description": "Office SIM monthly top-up",
+      "amount": 500,
+      "icon": "https://i.ibb.co.com/nsbjxKZp/Mobile-Recharge.png",
+      "organization": "Teletalk",
+      "dueDate": "2025-05-09"
+    },
+    {
+      "id": "30",
+      "category": "Credit Card Bill",
+      "description": "Corporate card statement",
+      "amount": 6850,
+      "icon": "https://i.ibb.co.com/JRkwyrp5/Credit-Card-Bill.png",
+      "organization": "Eastern Bank",
+      "dueDate": "2025-05-27"
+    }
+  ]
+  
