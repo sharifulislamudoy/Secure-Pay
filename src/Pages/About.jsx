@@ -1,11 +1,34 @@
 import React from 'react';
-import SocialImg from '../assets/social.png'
 
 const About = () => {
     return (
-        <div className='w-5/6 mx-auto text-black my-10'>
-            <div className='w-full shadow-t-xl rounded-t-2xl'><img src={SocialImg} className='rounded-t-2xl' alt="" /></div>
-            <h2 className='lg:text-2xl p-6 shadow-xl rounded-b-2xl '>At SecurePay, we’re committed to making bill payments fast, safe, and hassle-free. Our platform allows users to pay electricity, water, gas, internet, and other utility bills—all in one place. Backed by secure technology and user-friendly design, we aim to bring convenience and trust to every transaction. Whether you're at home or on the go, SecurePay ensures your payments are just a click away.</h2>
+        <div className="w-11/12 lg:w-4/5 mx-auto py-16">
+            <div className="text-center mb-12">
+                <h1 className="text-4xl font-bold text-blue-700 mb-4">About SecurePay</h1>
+                <p className="text-gray-600 max-w-2xl mx-auto">
+                    SecurePay is a modern digital banking platform committed to simplifying your financial life. We help you pay bills, track transactions, and manage finances with ease and complete security.
+                </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <img
+                        src="https://img.freepik.com/free-vector/secure-payment-concept-illustration_114360-5443.jpg"
+                        alt="SecurePay Illustration"
+                        className="rounded-xl shadow-md"
+                    />
+                </div>
+                <div>
+                    <h2 className="text-2xl font-semibold mb-4 text-gray-800">Why Choose SecurePay?</h2>
+                    <ul className="space-y-4 text-gray-600">
+                        <li>✅ 24/7 Bill Payment Support</li>
+                        <li>✅ Fast & Secure Transactions</li>
+                        <li>✅ Real-Time Transaction History</li>
+                        <li>✅ Multi-platform Access (Web, Mobile)</li>
+                        <li>✅ Trusted by thousands of users</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     );
 };

@@ -9,12 +9,25 @@ import About from '../Pages/About';
 import BillPayment from '../Pages/BillPayment';
 import BillDetails from '../Pages/BillDetails';
 import AuthForm from '../Components/AuthForm';
+import ErrorPage from '../Pages/ErrorPage';
+import TransactionHistory from '../Pages/TransactionHistory';
+import Support from '../Pages/Support';
+import SSLSecured from '../Components/SSLSecured';
+import TermsAndConditions from '../Components/TermsAndConditions';
+import PrivacyPolicy from '../Components/PrivacyPolicy';
+import Careers from '../Components/Careers';
+import FAQs from '../Components/FAQs';
+import ContactUs from '../Components/ContactUs';
+import HelpCenter from '../Components/HelpCenter';
+import ReportProblem from '../Components/ReportProblem';
+import EncryptedPayments from '../Components/EncryptedPayments';
+import TrustedUsers from '../Components/TrustedUsers';
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <Root></Root>,
-    errorElement: <h2>Error 404</h2>,
+    errorElement: <ErrorPage></ErrorPage>,
     children: [
       {
         index: true,
@@ -33,8 +46,56 @@ export const router = createBrowserRouter([
         element: <BillDetails></BillDetails>,
       },
       {
+        path: "/transactionhistory",
+        element: <TransactionHistory></TransactionHistory>
+      },
+      {
         path: "/login",
         element: <AuthForm></AuthForm>,
+      },
+      {
+        path:"/support",
+        element: <Support></Support>
+      },
+      {
+        path:"/sslsecured",
+        element:<SSLSecured></SSLSecured>,
+      },
+      {
+        path: "/terms",
+        element: <TermsAndConditions></TermsAndConditions>,
+      },
+      {
+        path: "/privacy-policy",
+        element: <PrivacyPolicy></PrivacyPolicy>,
+      },
+      {
+        path: "/careers",
+        element: <Careers></Careers>,
+      },
+      {
+        path: "/faq",
+        element: <FAQs></FAQs>,
+      },
+      {
+        path: "/contactus",
+        element: <ContactUs></ContactUs>
+      },
+      {
+        path: "/helpcenter",
+        element: <HelpCenter></HelpCenter>,
+      },
+      {
+        path: "/reportproblem",
+        element: <ReportProblem></ReportProblem>,
+      },
+      {
+        path: "/encrypted-payment",
+        element: <EncryptedPayments></EncryptedPayments>,
+      },
+      {
+        path: "/trusted-users",
+        element: <TrustedUsers></TrustedUsers>
       }
     ]
   },
