@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from 'react';
+import toast from 'react-hot-toast';
 import { useParams } from 'react-router-dom';
 
 const BillDetails = () => {
     const { id } = useParams();
     const [bill, setBill] = useState(null);
+    const [paid ,setPaid] = useState(false);
 
     useEffect(() => {
         fetch('/Billing.json')
@@ -13,6 +15,16 @@ const BillDetails = () => {
                 setBill(found);
             });
     }, [id]);
+
+    const handlePayNow = () => {
+        if (!paid) {
+            toast.success('Payment Successful.');
+            setPaid(true);
+        }
+        else {
+            toast.error('You have already paid this bill.')
+        }
+    };
 
     if (!bill) {
         return <div className="text-center mt-10">Loading bill details...</div>;
@@ -32,7 +44,7 @@ const BillDetails = () => {
             <p className="text-xs lg:text-lg text-gray-500">Due Date: {bill.dueDate}</p>
             <p className="font-bold text-blue-600 mt-1">Amount: ৳ {bill.amount}</p>
                 <div className="card-actions justify-end">
-                    <button className="btn btn-primary">Pay Now</button>
+                    <button onClick={handlePayNow} className="btn btn-primary">Pay Now</button>
                 </div>
             </div>
         </div>

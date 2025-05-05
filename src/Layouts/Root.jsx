@@ -3,6 +3,7 @@ import Navbar from '../Components/Navbar';
 import { Outlet, useLocation } from 'react-router';
 import Footer from '../Components/Footer';
 import LoadingSpinner from '../Components/LoadingSpinner';
+import { Toaster } from 'react-hot-toast';
 
 const Root = () => {
     const location = useLocation();
@@ -22,6 +23,7 @@ const Root = () => {
             <Navbar></Navbar>
             <Outlet></Outlet>
             <Footer></Footer>
+            <Toaster position="top-right" reverseOrder={false}></Toaster>
         </div>
     );
 };
