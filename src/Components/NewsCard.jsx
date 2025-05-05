@@ -45,7 +45,7 @@ const NewsCard = () => {
                 <>
                     <ul className="grid lg:grid-cols-2 gap-3">
                         {visibleNews.map(item => (
-                            <li key={item.id} className="border p-4 rounded-xl shadow-md hover:shadow-lg transition">
+                            <li key={item.id} className="border p-4 rounded-xl shadow-md hover:shadow-lg transition bg-white">
                                 <h3 className="text-lg font-semibold text-blue-700">{item.headline}</h3>
                                 <p className="text-sm text-gray-600 mb-2">{item.description}</p>
                                 <div className="text-xs text-gray-500">

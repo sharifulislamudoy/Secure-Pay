@@ -8,6 +8,7 @@ import HomeLayout from '../Layouts/HomeLayout';
 import About from '../Pages/About';
 import BillPayment from '../Pages/BillPayment';
 import BillDetails from '../Pages/BillDetails';
+import AuthForm from '../Components/AuthForm';
 
 export const router = createBrowserRouter([
   {
@@ -30,6 +31,10 @@ export const router = createBrowserRouter([
       {
         path: "/billdetails/:id",
         element: <BillDetails></BillDetails>,
+      },
+      {
+        path: "/login",
+        element: <AuthForm></AuthForm>,
       }
     ]
   },
