@@ -1,0 +1,33 @@
+[
+    {
+      "id": "service001",
+      "title": "Utility Bill Payment",
+      "description": "Pay your electricity, water, and gas bills in seconds."
+    },
+    {
+      "id": "service002",
+      "title": "Mobile Recharge",
+      "description": "Top up any mobile number instantly, anytime."
+    },
+    {
+      "id": "service003",
+      "title": "Bank Transfer",
+      "description": "Send money directly to any bank account in Bangladesh."
+    },
+    {
+      "id": "service004",
+      "title": "Internet Bill Payment",
+      "description": "Pay broadband and ISP bills from one place."
+    },
+    {
+      "id": "service005",
+      "title": "Ticket Booking",
+      "description": "Book bus, launch, or event tickets effortlessly."
+    },
+    {
+      "id": "service006",
+      "title": "Tuition Fees",
+      "description": "Pay school, college, and university fees securely."
+    }
+  ]
+  

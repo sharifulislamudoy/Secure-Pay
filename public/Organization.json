@@ -1,0 +1,170 @@
+[
+    {
+      "id": "org001",
+      "name": "DESCO",
+      "type": "Electricity",
+      "icon": "https://i.ibb.co.com/vxb4JcR8/Untitled-design-18.png"
+    },
+    {
+      "id": "org002",
+      "name": "NESCO",
+      "type": "Electricity",
+      "icon": "https://i.ibb.co.com/NgMrCZg9/Untitled-design-19.png"
+    },
+    {
+      "id": "org003",
+      "name": "DPDC",
+      "type": "Electricity",
+      "icon": "https://i.ibb.co.com/1GBKGM7G/Untitled-design-20.png"
+    },
+    {
+      "id": "org004",
+      "name": "WASA",
+      "type": "Water Supply",
+      "icon": "https://i.ibb.co.com/Psm4CnGJ/Untitled-design-21.png"
+    },
+    {
+      "id": "org005",
+      "name": "TITAS Gas",
+      "type": "Gas",
+      "icon": "https://i.ibb.co.com/MyBq75fc/Untitled-design-22.png"
+    },
+    {
+      "id": "org006",
+      "name": "Palli Bidyut",
+      "type": "Electricity (Rural)",
+      "icon": "https://i.ibb.co.com/0RMQ3rFL/Untitled-design-23.png"
+    },
+    {
+      "id": "org007",
+      "name": "BTCL",
+      "type": "Telephone",
+      "icon": "https://i.ibb.co.com/cSXvn7X9/Untitled-design-24.png"
+    },
+    {
+      "id": "org008",
+      "name": "Banglalink",
+      "type": "Mobile Recharge",
+      "icon": "https://i.ibb.co.com/8nQCvDvC/Untitled-design-25.png"
+    },
+    {
+      "id": "org009",
+      "name": "Robi",
+      "type": "Mobile Recharge",
+      "icon": "https://i.ibb.co.com/FLFtxx9s/Untitled-design-26.png"
+    },
+    {
+      "id": "org010",
+      "name": "Grameenphone",
+      "type": "Mobile Recharge",
+      "icon": "https://i.ibb.co.com/cKCsYpFf/Untitled-design-27.png"
+    },
+    {
+      "id": "org011",
+      "name": "Teletalk",
+      "type": "Mobile Recharge",
+      "icon": "https://i.ibb.co.com/zTBNqG0F/Untitled-design-28.png"
+    },
+    {
+        "id": "org012",
+        "name": "City Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/0pFLNYQ6/Untitled-design-29.png"
+      },
+      {
+        "id": "org013",
+        "name": "BRAC Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/jv9SCnSf/Untitled-design-30.png"
+      },
+      {
+        "id": "org014",
+        "name": "Dutch-Bangla Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/6cXW3NJ4/Untitled-design-31.png"
+      },
+      {
+        "id": "org015",
+        "name": "Islami Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/7xF6BF2x/Untitled-design-42.png"
+      },
+      {
+        "id": "org016",
+        "name": "IFIC Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/WvyD7zVn/Untitled-design-43.png"
+      },
+      {
+        "id": "org017",
+        "name": "Prime Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/W4kDvJDt/Untitled-design-44.png"
+      },
+      {
+        "id": "org018",
+        "name": "Eastern Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/mCWPzDYV/Untitled-design-47.png"
+      },
+      {
+        "id": "org019",
+        "name": "Mutual Trust Bank",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/xtz9SFY2/Untitled-design-45.png"
+      },
+      {
+        "id": "org020",
+        "name": "Bank Asia",
+        "type": "Bank",
+        "icon": "https://i.ibb.co.com/Y4qSc7Zz/Untitled-design-34.png"
+      },
+      {
+        "id": "org021",
+        "name": "bKash",
+        "type": "Mobile Wallet",
+        "icon": "https://i.ibb.co.com/h1VmsQST/Untitled-design-35.png"
+      },
+      {
+        "id": "org022",
+        "name": "Nagad",
+        "type": "Mobile Wallet",
+        "icon": "https://i.ibb.co.com/hFjtbqxj/Untitled-design-46.png"
+      },
+      {
+        "id": "org023",
+        "name": "Rocket (DBBL)",
+        "type": "Mobile Wallet",
+        "icon": "https://i.ibb.co.com/5WnhCkPm/Untitled-design-36.png"
+      },
+      {
+        "id": "org024",
+        "name": "EkPay",
+        "type": "Payment Gateway",
+        "icon": "https://i.ibb.co.com/hph5BP8/Untitled-design-37.png"
+      },
+      {
+        "id": "org025",
+        "name": "PayStation",
+        "type": "Payment Aggregator",
+        "icon": "https://i.ibb.co.com/Y4Q1kMhH/Untitled-design-38.png"
+      },
+      {
+        "id": "org026",
+        "name": "SureCash",
+        "type": "Mobile Wallet",
+        "icon": "https://i.ibb.co.com/ccCR65yQ/Untitled-design-39.png"
+      },
+      {
+        "id": "org027",
+        "name": "Shohoz",
+        "type": "Ticketing & Bill Pay",
+        "icon": "https://i.ibb.co.com/w1sqfcm/Untitled-design-40.png"
+      },
+      {
+        "id": "org028",
+        "name": "Surokkha",
+        "type": "Govt. Health Service",
+        "icon": "https://i.ibb.co.com/jvpCCPX8/Untitled-design-41.png"
+      }
+  ]
