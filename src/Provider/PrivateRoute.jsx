@@ -1,15 +1,18 @@
-import React, { use } from 'react';
+import React, { use, useContext } from 'react';
 import { AuthContext } from './AuthProvider';
 import LoginRequiredNotice from '../Components/LoginRequiredNotice';
+import { Navigate, useLocation } from 'react-router';
 
 const PrivateRoute = ({ children }) => {
 
-    const { user } =use(AuthContext);
+    const { user } =useContext(AuthContext);
 
-    if (user && user?.email){
-        return children;
+    const location = useLocation();
+
+    if (!user){
+        return <Navigate to={'/login-required'} state={{from:location}} replace></Navigate>;
     }
-    return <LoginRequiredNotice></LoginRequiredNotice>
+    return children;
 };
 
 export default PrivateRoute;

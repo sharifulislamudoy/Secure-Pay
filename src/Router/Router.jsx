@@ -23,6 +23,7 @@ import ReportProblem from '../Components/ReportProblem';
 import EncryptedPayments from '../Components/EncryptedPayments';
 import TrustedUsers from '../Components/TrustedUsers';
 import PrivateRoute from '../Provider/PrivateRoute';
+import LoginRequiredNotice from '../Components/LoginRequiredNotice';
 
 export const router = createBrowserRouter([
   {
@@ -39,7 +40,7 @@ export const router = createBrowserRouter([
         element: <About></About>
       },
       {
-        path: "/paybills",
+        path: "/pay-bills",
         element:<PrivateRoute>
           <BillPayment></BillPayment>
         </PrivateRoute>,
@@ -103,6 +104,10 @@ export const router = createBrowserRouter([
       {
         path: "/trusted-users",
         element: <TrustedUsers></TrustedUsers>
+      },
+      {
+        path:"/login-required",
+        element: <LoginRequiredNotice></LoginRequiredNotice>,
       }
     ]
   },

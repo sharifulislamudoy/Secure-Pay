@@ -2,6 +2,7 @@ import React, { use, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
+import { useLocation, useNavigate } from 'react-router';
 
 const AuthForm = () => {
 
@@ -41,16 +42,19 @@ const AuthForm = () => {
     });
   };
 
+  const location = useLocation();
+  const navigate = useNavigate();
+  const from = location.state?.form?.pathname || '/pay-bills';
+
   const handleLogin= (e)=> {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    console.log({email,password})
     signIn(email,password)
     .then((result) => {
       const user =result.user;
-      console.log(user);
+      navigate(from, {replace: true});
     })
     .catch((error) => {
       const errorCode = error.code;
