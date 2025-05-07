@@ -24,6 +24,7 @@ import EncryptedPayments from '../Components/EncryptedPayments';
 import TrustedUsers from '../Components/TrustedUsers';
 import PrivateRoute from '../Provider/PrivateRoute';
 import LoginRequiredNotice from '../Components/LoginRequiredNotice';
+import Dashboard from '../Pages/Dashboard';
 
 export const router = createBrowserRouter([
   {
@@ -108,6 +109,10 @@ export const router = createBrowserRouter([
       {
         path:"/login-required",
         element: <LoginRequiredNotice></LoginRequiredNotice>,
+      },
+      {
+        path:'/dashboard',
+        element:<Dashboard></Dashboard>
       }
     ]
   },

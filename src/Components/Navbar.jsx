@@ -23,7 +23,7 @@ const Navbar = () => {
     <NavLink to={'/'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>Home</NavLink>
     <NavLink to={'/pay-bills'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>Pay Bills</NavLink>
     <NavLink to={'/transactionhistory'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>Transaction History</NavLink>
-    <NavLink to={'/myaccount'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>My Account</NavLink>
+    <NavLink to={'/dashboard'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>My Account</NavLink>
     <NavLink to={'/support'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'> Support</NavLink>
     <NavLink to={'/about'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>About Us</NavLink>
 
