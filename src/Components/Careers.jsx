@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 const Careers = () => {
   const jobOpenings = [
@@ -64,9 +65,9 @@ const Careers = () => {
                     <h3 className="text-xl font-semibold text-blue-700">{job.title}</h3>
                     <p className="text-gray-500 text-sm">{job.location} · {job.type}</p>
                   </div>
-                  <button className="mt-4 md:mt-0 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
+                  <Link to={'/login'} className="mt-4 md:mt-0 bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">
                     Apply Now
-                  </button>
+                  </Link>
                 </div>
               </li>
             ))}

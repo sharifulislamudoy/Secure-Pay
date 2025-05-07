@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import toast from 'react-hot-toast';
+import { Link, Navigate } from 'react-router';
 import { useParams } from 'react-router-dom';
 
 const BillDetails = () => {
@@ -51,7 +52,7 @@ const BillDetails = () => {
                 <p className="text-xs lg:text-lg text-gray-500">Due Date: {bill.dueDate}</p>
                 <p className="font-bold text-blue-600 mt-1">Amount: ৳ {bill.amount}</p>
                 <div className="card-actions justify-end">
-                    <button onClick={handlePayNow} className="btn btn-primary">Pay Now</button>
+                    <Link to={'/transactionhistory'} onClick={handlePayNow} className="btn btn-primary">Pay Now</Link>
                 </div>
             </div>
         </div>
