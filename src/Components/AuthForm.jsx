@@ -1,8 +1,66 @@
-import React, { useState } from 'react';
+import React, { use, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
+import { AuthContext } from '../Provider/AuthProvider';
 
 const AuthForm = () => {
+
+  const { createUser, setUser, signIn } = use(AuthContext);
+
+
+
+  const handleRegister = (e) => {
+    e.preventDefault();
+    console.log(e.target);
+    const form = e.target;
+    const name = form.name.value;
+    const email = form.email.value;
+    const password = form.password.value;
+    const phone = form.phone.value;
+    const id = form.id.value;
+    const photo = form.photo.value;
+    const birth = form.birth.value;
+    const address = form.address.value;
+    const accountType = form.accountType.value;
+    const nName = form.nName.value;
+    const nid = form.nid.value;
+    const occupation = form.occupation.value;
+
+    console.log({ name, email, phone, address });
+
+    createUser(email, password, phone)
+    .then((result) => {
+      const user = result.user;
+      // console.log(user);
+      setUser(user);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode,errorMessage);
+    });
+  };
+
+  const handleLogin= (e)=> {
+    e.preventDefault();
+    const form = e.target;
+    const email = form.email.value;
+    const password = form.password.value;
+    console.log({email,password})
+    signIn(email,password)
+    .then((result) => {
+      const user =result.user;
+      console.log(user);
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode,errorMessage);
+    });
+  }
+
+
+
   const [isLogin, setIsLogin] = useState(true);
 
   const formVariants = {
@@ -21,6 +79,7 @@ const AuthForm = () => {
         <AnimatePresence mode="wait">
           {isLogin ? (
             <motion.form
+            onSubmit={handleLogin}
               key="login"
               variants={formVariants}
               initial="initial"
@@ -30,13 +89,14 @@ const AuthForm = () => {
               className="space-y-4"
             >
               <input
+              name='email'
                 required
                 type="email"
                 placeholder="Email"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
               />
               <input
-                required
+              name='password'
                 type="password"
                 placeholder="Password"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
@@ -57,59 +117,75 @@ const AuthForm = () => {
               exit="exit"
               transition={{ duration: 0.4 }}
               className="space-y-4"
+              onSubmit={handleRegister}
             >
               <input
+                name='name'
                 type="text"
                 placeholder="Full Name"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
               />
 
               <input
+                name='email'
                 type="email"
                 placeholder="Email"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
               />
 
               <input
+                name='password'
                 type="password"
                 placeholder="Password"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
               />
 
               <input
+                name='phone'
                 type="tel"
                 placeholder="Mobile Number"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
               />
 
               <input
+                name='id'
                 type="text"
                 placeholder="National ID or Passport Number"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
+              />
+              <input
+                name='photo'
+                type="text"
+                placeholder="Photo URL"
+                className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
+              // required
               />
 
               <input
+                name='birth'
                 type="date"
                 placeholder="Date of Birth"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
               />
 
               <input
+                name='address'
                 type="text"
                 placeholder="Address"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
               />
 
               <select
+                name='accountType'
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
-                required
+              // required
               >
                 <option value="">Select Account Type</option>
                 <option value="savings">Savings Account</option>
@@ -118,18 +194,21 @@ const AuthForm = () => {
               </select>
 
               <input
+                name='nName'
                 type="text"
                 placeholder="Nominee Name"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
               />
 
               <input
+                name='nid'
                 type="text"
                 placeholder="Nominee NID or Passport"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
               />
 
               <input
+                name='occupation'
                 type="text"
                 placeholder="Occupation"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
@@ -147,20 +226,17 @@ const AuthForm = () => {
         </AnimatePresence>
 
 
-        // Inside your JSX
         <div className="text-center mt-4 space-y-2">
           <p className="text-sm text-gray-600">Or <span className='text-blue-500'>continue with</span></p>
           <div className="flex flex-col gap-3">
             <button
-              onClick={() => handleProviderLogin(googleProvider)}
               className="flex items-center justify-center gap-3 border border-gray-300 bg-white text-gray-700 px-4 py-2 rounded-md shadow-sm hover:bg-gray-100 transition"
             >
-              <FaGoogle  />
+              <FaGoogle />
               Continue with Google
             </button>
 
             <button
-              onClick={() => handleProviderLogin(githubProvider)}
               className="flex items-center justify-center gap-3 border border-gray-700 bg-black text-white px-4 py-2 rounded-md shadow-sm hover:bg-gray-900 transition"
             >
               <FaGithub className="text-white" />
@@ -168,7 +244,6 @@ const AuthForm = () => {
             </button>
 
             <button
-              onClick={() => handleProviderLogin(facebookProvider)}
               className="flex items-center justify-center gap-3 border border-blue-700 bg-white text-black px-4 py-2 rounded-md shadow-sm hover:bg-gray-100 transition"
             >
               <FaFacebookF className='text-blue-700' />

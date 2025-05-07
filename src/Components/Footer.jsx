@@ -14,14 +14,6 @@ const Footer = () => {
                 <a className="link link-hover">My Account</a>
                 <Link to={'/login'} className="link link-hover">Login / Register</Link>
             </nav>
-            <nav>
-                <h6 className="footer-title">Bill Categories</h6>
-                <a className="link link-hover">Electricity Bill</a>
-                <a className="link link-hover">Water Bill</a>
-                <a className="link link-hover">Gas Bill</a>
-                <a className="link link-hover">Internet Bill</a>
-                <a className="link link-hover">Mobile Recharge</a>
-            </nav>
             
             <nav>
                 <h6 className="footer-title">Company</h6>

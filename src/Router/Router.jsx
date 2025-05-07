@@ -22,6 +22,7 @@ import HelpCenter from '../Components/HelpCenter';
 import ReportProblem from '../Components/ReportProblem';
 import EncryptedPayments from '../Components/EncryptedPayments';
 import TrustedUsers from '../Components/TrustedUsers';
+import PrivateRoute from '../Provider/PrivateRoute';
 
 export const router = createBrowserRouter([
   {
@@ -39,15 +40,21 @@ export const router = createBrowserRouter([
       },
       {
         path: "/paybills",
-        element:<BillPayment></BillPayment>,
+        element:<PrivateRoute>
+          <BillPayment></BillPayment>
+        </PrivateRoute>,
       },
       {
         path: "/billdetails/:id",
-        element: <BillDetails></BillDetails>,
+        element: <PrivateRoute>
+          <BillDetails></BillDetails>
+        </PrivateRoute>,
       },
       {
         path: "/transactionhistory",
-        element: <TransactionHistory></TransactionHistory>
+        element: <PrivateRoute>
+          <TransactionHistory></TransactionHistory>
+        </PrivateRoute>,
       },
       {
         path: "/login",
