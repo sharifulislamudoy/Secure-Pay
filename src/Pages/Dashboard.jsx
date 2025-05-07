@@ -87,7 +87,7 @@ const Dashboard = () => {
       .then(() => {
         localStorage.removeItem('registrationData');
         setTimeout(() => {
-          navigate('/login');
+          navigate('/');
         }, 500);
       })
       .catch((err) => {
@@ -222,7 +222,7 @@ const Dashboard = () => {
             disabled={loadingAction === 'logout'}
           >
             {loadingAction === 'logout' ? (
-              <span className="loader"></span>
+              <span className="loading loading-spinner text-error"></span>
             ) : (
               <>
                 <FaSignOutAlt /> Logout

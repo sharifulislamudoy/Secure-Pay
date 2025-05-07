@@ -11,14 +11,12 @@ import {
 export const AuthContext = createContext();
 
 const auth = getAuth(app);
-
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userData, setUserData] = useState(() => {
     const storedData = localStorage.getItem('registrationData');
     return storedData ? JSON.parse(storedData) : null;
   });
-
   const createUser = (email, password, phone) => {
     return createUserWithEmailAndPassword(auth, email, password, phone);
   };
@@ -27,13 +25,17 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  const logOut = () => {
-    return signOut(auth).then(() => {
+  const logOut = async () => {
+    try {
+      await signOut(auth);
       setUser(null);
       setUserData(null);
       localStorage.removeItem('registrationData');
-    });
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
   };
+
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
@@ -48,10 +50,10 @@ const AuthProvider = ({ children }) => {
     user,
     setUser,
     userData,
-    setUserData, // ✅ এইটা এখন আছে
+    setUserData,
     createUser,
     signIn,
-    logout: logOut, // ✅ logOut -> logout
+    logout: logOut,
   };
 
   return (

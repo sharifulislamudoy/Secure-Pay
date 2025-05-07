@@ -25,7 +25,7 @@ const AuthForm = () => {
     const nName = form.nName.value;
     const nid = form.nid.value;
     const occupation = form.occupation.value;
-  
+
     const userData = {
       name,
       email,
@@ -40,17 +40,17 @@ const AuthForm = () => {
       nomineeId: nid,
       occupation,
     };
-  
+
     // 👉 Save data to localStorage
     localStorage.setItem("registrationData", JSON.stringify(userData));
-  
+
     console.log("User data saved to localStorage:", userData);
-  
+
     createUser(email, password, phone)
       .then((result) => {
         const user = result.user;
         setUser(user);
-        navigate(from, {replace: true});
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -58,27 +58,27 @@ const AuthForm = () => {
         console.log(errorCode, errorMessage);
       });
   };
-  
+
 
   const location = useLocation();
   const navigate = useNavigate();
   const from = location.state?.from?.pathname || '/pay-bills';
 
-  const handleLogin= (e)=> {
+  const handleLogin = (e) => {
     e.preventDefault();
     const form = e.target;
     const email = form.email.value;
     const password = form.password.value;
-    signIn(email,password)
-    .then((result) => {
-      const user =result.user;
-      navigate(from, {replace: true});
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode,errorMessage);
-    });
+    signIn(email, password)
+      .then((result) => {
+        const user = result.user;
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   }
 
 
@@ -101,7 +101,7 @@ const AuthForm = () => {
         <AnimatePresence mode="wait">
           {isLogin ? (
             <motion.form
-            onSubmit={handleLogin}
+              onSubmit={handleLogin}
               key="login"
               variants={formVariants}
               initial="initial"
@@ -111,14 +111,14 @@ const AuthForm = () => {
               className="space-y-4"
             >
               <input
-              name='email'
+                name='email'
                 required
                 type="email"
                 placeholder="Email"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"
               />
               <input
-              name='password'
+                name='password'
                 type="password"
                 placeholder="Password"
                 className="w-full p-2 border rounded focus:outline-none focus:ring-2 focus:ring-blue-500 border-blue-400 text-black"

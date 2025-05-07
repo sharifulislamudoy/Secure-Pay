@@ -1,5 +1,5 @@
 import React, { use } from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import LogoImg from '../assets/icon.png'
 import User from '../assets/user.png'
 import '../Components/Navbar.css'
@@ -10,13 +10,13 @@ const Navbar = () => {
 
   const { user, logout } = use(AuthContext);
 
-  const handleLogout =() => {
+  const handleLogout = () => {
     logout()
-    .then(() => {
-      toast.error('You are Successfully logged out')
-    }).catch((error) => {
-      console.log(error)
-    });
+      .then(() => {
+        toast.error('You are Successfully logged out');
+      }).catch((error) => {
+        console.log(error)
+      });
   }
 
   const links = <>
@@ -54,12 +54,12 @@ const Navbar = () => {
       </div>
       <div className="navbar-end">
         {user ? (
-          <button 
-          onClick={handleLogout}
-          className="btn bg-red-600 hover:bg-red-700 text-white">
-          <img src={User} alt="user" className="rounded-full h-6" />
-          <p>Logout</p>
-        </button>
+          <Link to={'/'}
+            onClick={handleLogout}
+            className="btn text-white">
+            <img src={User} alt="user" className="rounded-full h-6" />
+            <p>Logout</p>
+          </Link>
         ) : (
           <NavLink to="/login" className="btn bg-blue-800 hover:bg-blue-900 text-white">
             <img src={User} alt="user" className="rounded-full h-6" />
