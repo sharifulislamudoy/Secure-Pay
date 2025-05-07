@@ -9,9 +9,9 @@ const Footer = () => {
             <nav>
                 <h6 className="footer-title">Quick Links</h6>
                 <Link to={"/"} className="link link-hover">Home</Link>
-                <Link to={'/paybills'} className="link link-hover">Pay Bills</Link>
+                <Link to={'/pay-bills'} className="link link-hover">Pay Bills</Link>
                 <Link to={'/transactionhistory'} className="link link-hover">Transaction History</Link>
-                <a className="link link-hover">My Account</a>
+                <Link to={'/dashboard'} className="link link-hover">My Account</Link>
                 <Link to={'/login'} className="link link-hover">Login / Register</Link>
             </nav>
             

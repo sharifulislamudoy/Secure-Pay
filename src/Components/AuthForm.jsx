@@ -50,6 +50,7 @@ const AuthForm = () => {
       .then((result) => {
         const user = result.user;
         setUser(user);
+        navigate(from, {replace: true});
       })
       .catch((error) => {
         const errorCode = error.code;

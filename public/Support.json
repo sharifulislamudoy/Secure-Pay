@@ -3,25 +3,29 @@
       "id": 1,
       "title": "FAQ",
       "desc": "Browse frequently asked questions.",
-      "icon": "❓"
+      "icon": "❓",
+      "path": "/faq"
     },
     {
       "id": 2,
       "title": "Live Chat",
       "desc": "Chat with our support agents in real time.",
-      "icon": "💬"
+      "icon": "💬",
+      "path": "/contactus"
     },
     {
       "id": 3,
       "title": "Call Us",
       "desc": "Get instant support by phone.",
-      "icon": "📞"
+      "icon": "📞",
+      "path": "/helpcenter"
     },
     {
       "id": 4,
       "title": "Email",
       "desc": "Send us your issue at support@securepay.com",
-      "icon": "📧"
+      "icon": "📧",
+      "path": "/reportproblem"
     }
   ]
   

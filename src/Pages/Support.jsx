@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router';
 
 const Support = () => {
     const [supportItems, setSupportItems] = useState([]);
@@ -18,11 +19,11 @@ const Support = () => {
 
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
                 {supportItems.map(item => (
-                    <div key={item.id} className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
+                    <Link to={item.path} key={item.id} className="bg-white shadow-md rounded-xl p-6 text-center hover:shadow-lg transition">
                         <div className="text-4xl mb-4">{item.icon}</div>
                         <h3 className="text-xl font-semibold mb-1">{item.title}</h3>
                         <p className="text-sm text-gray-500">{item.desc}</p>
-                    </div>
+                    </Link>
                 ))}
             </div>
         </div>
