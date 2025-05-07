@@ -40,8 +40,6 @@ const AuthForm = () => {
       nomineeId: nid,
       occupation,
     };
-
-    // 👉 Save data to localStorage
     localStorage.setItem("registrationData", JSON.stringify(userData));
 
     console.log("User data saved to localStorage:", userData);

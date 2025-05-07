@@ -166,6 +166,7 @@ const Dashboard = () => {
           <div><strong>Date of Birth:</strong> {userData?.birth || 'N/A'}</div>
           <div><strong>Occupation:</strong> {userData?.occupation || 'N/A'}</div>
           <div><strong>Account Type:</strong> {userData?.accountType || 'Standard'}</div>
+          <div><strong>Account Balance:</strong> ৳ {userData?.balance ?? 'N/A'}</div>
         </div>
 
         <div className="flex flex-wrap gap-4 justify-between">

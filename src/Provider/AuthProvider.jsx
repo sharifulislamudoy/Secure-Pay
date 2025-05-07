@@ -14,11 +14,12 @@ const auth = getAuth(app);
 const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [userData, setUserData] = useState(() => {
+    
     const storedData = localStorage.getItem('registrationData');
-    return storedData ? JSON.parse(storedData) : null;
+    return storedData ? JSON.parse(storedData) : {balance: 10000};
   });
-  const createUser = (email, password, phone) => {
-    return createUserWithEmailAndPassword(auth, email, password, phone);
+  const createUser = (email, password) => {
+    return createUserWithEmailAndPassword(auth, email, password);
   };
 
   const signIn = (email, password) => {
