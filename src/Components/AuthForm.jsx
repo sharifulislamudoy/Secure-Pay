@@ -3,11 +3,12 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useLocation, useNavigate } from 'react-router';
+import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 
 const AuthForm = () => {
 
   const { createUser, setUser, signIn } = useContext(AuthContext);
-
+  const auth = getAuth();
 
 
   const handleRegister = (e) => {
@@ -69,7 +70,7 @@ const AuthForm = () => {
     const password = form.password.value;
     signIn(email, password)
       .then((result) => {
-        const user = result.user;
+        console.log(result)
         navigate(from, { replace: true });
       })
       .catch((error) => {
@@ -77,7 +78,22 @@ const AuthForm = () => {
         const errorMessage = error.message;
         console.log(errorCode, errorMessage);
       });
-  }
+  };
+
+  const handleGoogleLogin = () => {
+    const provider = new GoogleAuthProvider();
+    signInWithPopup(auth, provider)
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
+  };
 
 
 
@@ -250,6 +266,7 @@ const AuthForm = () => {
           <p className="text-sm text-gray-600">Or <span className='text-blue-500'>continue with</span></p>
           <div className="flex flex-col gap-3">
             <button
+             onClick={handleGoogleLogin}
               className="flex items-center justify-center gap-3 border border-gray-300 bg-white text-gray-700 px-4 py-2 rounded-md shadow-sm hover:bg-gray-100 transition"
             >
               <FaGoogle />
