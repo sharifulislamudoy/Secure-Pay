@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaFacebookF, FaGithub, FaGoogle } from 'react-icons/fa';
 import { AuthContext } from '../Provider/AuthProvider';
@@ -6,13 +6,12 @@ import { useLocation, useNavigate } from 'react-router';
 
 const AuthForm = () => {
 
-  const { createUser, setUser, signIn } = use(AuthContext);
+  const { createUser, setUser, signIn } = useContext(AuthContext);
 
 
 
   const handleRegister = (e) => {
     e.preventDefault();
-    console.log(e.target);
     const form = e.target;
     const name = form.name.value;
     const email = form.email.value;
@@ -26,25 +25,43 @@ const AuthForm = () => {
     const nName = form.nName.value;
     const nid = form.nid.value;
     const occupation = form.occupation.value;
-
-    console.log({ name, email, phone, address });
-
+  
+    const userData = {
+      name,
+      email,
+      password,
+      phone,
+      id,
+      photo,
+      birth,
+      address,
+      accountType,
+      nomineeName: nName,
+      nomineeId: nid,
+      occupation,
+    };
+  
+    // 👉 Save data to localStorage
+    localStorage.setItem("registrationData", JSON.stringify(userData));
+  
+    console.log("User data saved to localStorage:", userData);
+  
     createUser(email, password, phone)
-    .then((result) => {
-      const user = result.user;
-      // console.log(user);
-      setUser(user);
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      console.log(errorCode,errorMessage);
-    });
+      .then((result) => {
+        const user = result.user;
+        setUser(user);
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        console.log(errorCode, errorMessage);
+      });
   };
+  
 
   const location = useLocation();
   const navigate = useNavigate();
-  const from = location.state?.form?.pathname || '/pay-bills';
+  const from = location.state?.from?.pathname || '/pay-bills';
 
   const handleLogin= (e)=> {
     e.preventDefault();

@@ -1,4 +1,4 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../Provider/AuthProvider';
 import { useNavigate } from 'react-router-dom';
 import { FaEdit, FaSignOutAlt, FaSave, FaTimes } from 'react-icons/fa';
@@ -6,8 +6,18 @@ import { FaEdit, FaSignOutAlt, FaSave, FaTimes } from 'react-icons/fa';
 const Dashboard = () => {
   const { userData, setUserData, logout } = useContext(AuthContext);
   const [isEditing, setIsEditing] = useState(false);
-  const [loadingAction, setLoadingAction] = useState(null); // 'edit', 'save', 'cancel', 'logout'
+  const [loadingAction, setLoadingAction] = useState(null);
   const navigate = useNavigate();
+
+  // Load userData from localStorage if not present
+  useEffect(() => {
+    if (!userData) {
+      const savedData = localStorage.getItem('registrationData');
+      if (savedData) {
+        setUserData(JSON.parse(savedData));
+      }
+    }
+  }, [userData, setUserData]);
 
   const [formData, setFormData] = useState({
     name: userData?.name || '',
@@ -15,6 +25,17 @@ const Dashboard = () => {
     phone: userData?.phone || '',
     address: userData?.address || '',
   });
+
+  useEffect(() => {
+    if (userData) {
+      setFormData({
+        name: userData.name || '',
+        photo: userData.photo || '',
+        phone: userData.phone || '',
+        address: userData.address || '',
+      });
+    }
+  }, [userData]);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -26,7 +47,7 @@ const Dashboard = () => {
     setTimeout(() => {
       setIsEditing(true);
       setLoadingAction(null);
-    }, 1000);
+    }, 500);
   };
 
   const handleCancel = () => {
@@ -40,31 +61,34 @@ const Dashboard = () => {
         address: userData?.address || '',
       });
       setLoadingAction(null);
-    }, 1000);
+    }, 500);
   };
 
   const handleSave = () => {
     setLoadingAction('save');
     setTimeout(() => {
-      setUserData((prev) => ({
-        ...prev,
+      const updatedData = {
+        ...userData,
         name: formData.name,
         photo: formData.photo,
         phone: formData.phone,
         address: formData.address,
-      }));
+      };
+      setUserData(updatedData);
+      localStorage.setItem('registrationData', JSON.stringify(updatedData));
       setIsEditing(false);
       setLoadingAction(null);
-    }, 1000);
+    }, 500);
   };
 
   const handleLogout = () => {
     setLoadingAction('logout');
     logout()
       .then(() => {
+        localStorage.removeItem('registrationData');
         setTimeout(() => {
           navigate('/login');
-        }, 1000);
+        }, 500);
       })
       .catch((err) => {
         console.error(err);
@@ -85,7 +109,6 @@ const Dashboard = () => {
             alt="User"
             className="w-24 h-24 rounded-full object-cover mb-4 border-4 border-blue-500"
           />
-
           {isEditing ? (
             <>
               <input
@@ -107,7 +130,7 @@ const Dashboard = () => {
             </>
           ) : (
             <>
-              <h2 className="text-2xl font-bold">{userData?.name}</h2>
+              <h2 className="text-2xl font-bold text-black">{userData?.name}</h2>
               <p className="text-gray-500">{userData?.email}</p>
             </>
           )}
@@ -139,7 +162,7 @@ const Dashboard = () => {
               <div><strong>Address:</strong> {userData?.address || 'N/A'}</div>
             </>
           )}
-          <div><strong>NID:</strong> {userData?.nid || 'N/A'}</div>
+          <div><strong>NID:</strong> {userData?.id || 'N/A'}</div>
           <div><strong>Date of Birth:</strong> {userData?.birth || 'N/A'}</div>
           <div><strong>Occupation:</strong> {userData?.occupation || 'N/A'}</div>
           <div><strong>Account Type:</strong> {userData?.accountType || 'Standard'}</div>
@@ -149,7 +172,7 @@ const Dashboard = () => {
           {isEditing ? (
             <>
               <button
-               type="button"
+                type="button"
                 onClick={handleSave}
                 className="flex-1 bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 flex justify-center items-center gap-2"
                 disabled={loadingAction === 'save'}
@@ -163,7 +186,7 @@ const Dashboard = () => {
                 )}
               </button>
               <button
-               type="button"
+                type="button"
                 onClick={handleCancel}
                 className="flex-1 bg-gray-600 text-white py-2 px-4 rounded-lg hover:bg-gray-700 flex justify-center items-center gap-2"
                 disabled={loadingAction === 'cancel'}
