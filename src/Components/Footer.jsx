@@ -5,7 +5,7 @@ import { Link } from 'react-router';
 const Footer = () => {
     return (
         <footer className='bg-[#1E293B]'>
-            <div className="footer sm:footer-horizontal  text-base-content p-10">
+            <div className="footer sm:footer-horizontal   p-10 text-white">
             <nav>
                 <h6 className="footer-title">Quick Links</h6>
                 <Link to={"/"} className="link link-hover">Home</Link>
@@ -44,7 +44,7 @@ const Footer = () => {
                 </div>
             </nav>
             </div>
-            <p className='text-center pb-6'>Copyright © {new Date().getFullYear()} - All right reserved by SecurePay</p>
+            <p className='text-center pb-6 text-white'>Copyright © {new Date().getFullYear()} - All right reserved by SecurePay</p>
         </footer>
     );
 };

@@ -20,12 +20,12 @@ const Navbar = () => {
   }
 
   const links = <>
-    <NavLink to={'/'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>Home</NavLink>
-    <NavLink to={'/pay-bills'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>Pay Bills</NavLink>
-    <NavLink to={'/transactionhistory'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>Transaction History</NavLink>
-    <NavLink to={'/dashboard'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>My Account</NavLink>
-    <NavLink to={'/support'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'> Support</NavLink>
-    <NavLink to={'/about'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg'>About Us</NavLink>
+    <NavLink to={'/'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg text-white'>Home</NavLink>
+    <NavLink to={'/pay-bills'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg text-white'>Pay Bills</NavLink>
+    <NavLink to={'/transactionhistory'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg text-white'>Transaction History</NavLink>
+    <NavLink to={'/dashboard'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg text-white'>My Account</NavLink>
+    <NavLink to={'/support'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg text-white'> Support</NavLink>
+    <NavLink to={'/about'} className='mx-2 hover:bg-blue-800 p-3 rounded-lg text-white'>About Us</NavLink>
 
   </>
 
@@ -44,7 +44,7 @@ const Navbar = () => {
         </div>
         <div className='flex items-center gap-2'>
           <img src={LogoImg} alt="securePay" className='rounded-full h-6' />
-          <a className="text-2xl">SecurePay</a>
+          <a className="text-2xl text-white">SecurePay</a>
         </div>
       </div>
       <div className="navbar-center hidden md:flex">
