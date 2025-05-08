@@ -1,6 +1,5 @@
 import React, { use, useContext } from 'react';
 import { AuthContext } from './AuthProvider';
-import LoginRequiredNotice from '../Components/LoginRequiredNotice';
 import { Navigate, useLocation } from 'react-router';
 
 const PrivateRoute = ({ children }) => {

@@ -43,7 +43,7 @@ const AuthForm = () => {
     };
     localStorage.setItem("registrationData", JSON.stringify(userData));
 
-    console.log("User data saved to localStorage:", userData);
+    // console.log("User data saved to localStorage:", userData);
 
     createUser(email, password, phone)
       .then((result) => {

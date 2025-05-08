@@ -23,7 +23,7 @@ const TransactionHistory = () => {
     if (transactions.length === 0) {
         return <div className='min-h-screen flex justify-center items-center flex-col'>
             <p className="font-bold text-red-600 text-2xl my-10">No Transactions Yet.</p>
-            <Link to={'/paybills'} className='bg-red-600 p-4 rounded-lg'>Go For Paying Due Bills</Link>
+            <Link to={'/pay-bills'} className='bg-red-600 p-4 rounded-lg'>Go For Paying Due Bills</Link>
         </div>
     }
 
