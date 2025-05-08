@@ -272,7 +272,7 @@ const AuthForm = () => {
           <div className="flex flex-col gap-3">
             <button
              onClick={handleGoogleLogin}
-              className="flex items-center justify-center gap-5 px-4 py-2 rounded-md shadow-sm hover:bg-gray-100"
+              className="flex items-center border justify-center gap-5 px-4 py-2 rounded-md shadow-sm hover:bg-gray-100"
             >
               <FcGoogle />
              <p className='text-gray-500'> Continue with Google</p>
