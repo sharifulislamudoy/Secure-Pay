@@ -16,7 +16,9 @@ const AuthProvider = ({ children }) => {
   const [userData, setUserData] = useState(() => {
     
     const storedData = localStorage.getItem('registrationData');
-    return storedData ? JSON.parse(storedData) : {balance: 10000};
+    return storedData
+  ? { ...JSON.parse(storedData), balance: JSON.parse(storedData).balance ?? 10000 }
+  : { balance: 10000 };
   });
   const createUser = (email, password) => {
     return createUserWithEmailAndPassword(auth, email, password);

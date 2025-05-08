@@ -1,11 +1,11 @@
 import React, { useEffect, useState, useContext } from 'react'; // Make sure useContext is imported
 import toast from 'react-hot-toast';
-import { Link, useParams } from 'react-router-dom'; // Fix incorrect import from 'react-router'
+import { Link, useNavigate, useParams } from 'react-router-dom'; // Fix incorrect import from 'react-router'
 import { AuthContext } from '../Provider/AuthProvider'; // Add this line
 
 const BillDetails = () => {
     const { userData, setUserData } = useContext(AuthContext); // Use hook at top level
-
+    const navigate = useNavigate();
     const { id } = useParams();
     const [bill, setBill] = useState(null);
     const [paid, setPaid] = useState(false);
@@ -22,6 +22,7 @@ const BillDetails = () => {
     const handlePayNow = () => {
         if (paid) {
             toast.error('You have already paid this bill.');
+            navigate('/transactionhistory');
             return;
         }
 

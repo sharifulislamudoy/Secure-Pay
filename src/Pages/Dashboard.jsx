@@ -9,13 +9,19 @@ const Dashboard = () => {
   const [loadingAction, setLoadingAction] = useState(null);
   const navigate = useNavigate();
 
-  // Load userData from localStorage if not present
   useEffect(() => {
     if (!userData) {
+      // const savedData = localStorage.getItem('registrationData');
       const savedData = localStorage.getItem('registrationData');
       if (savedData) {
-        setUserData(JSON.parse(savedData));
+        const parsedData = JSON.parse(savedData);
+        const updatedData = {
+          ...parsedData,
+          balance: parsedData.balance ?? 10000,
+        };
+        setUserData(updatedData);
       }
+
     }
   }, [userData, setUserData]);
 
@@ -34,6 +40,7 @@ const Dashboard = () => {
         phone: userData.phone || '',
         address: userData.address || '',
       });
+      console.log(userData)
     }
   }, [userData]);
 
@@ -73,6 +80,7 @@ const Dashboard = () => {
         photo: formData.photo,
         phone: formData.phone,
         address: formData.address,
+        balance: userData?.balance ?? 10000
       };
       setUserData(updatedData);
       localStorage.setItem('registrationData', JSON.stringify(updatedData));
