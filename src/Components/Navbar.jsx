@@ -66,11 +66,6 @@ const Navbar = () => {
             <p>Login</p>
           </NavLink>
         )}
-
-        {/* <NavLink to={'/login'} className='btn bg-blue-800'>
-                    <img src={User} alt="" className='rounded-full h-6'/>
-                    <p>Login</p>
-                </NavLink> */}
       </div>
     </div>
   );

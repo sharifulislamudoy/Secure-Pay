@@ -25,6 +25,14 @@ import TrustedUsers from '../Components/TrustedUsers';
 import PrivateRoute from '../Provider/PrivateRoute';
 import LoginRequiredNotice from '../Components/LoginRequiredNotice';
 import Dashboard from '../Pages/Dashboard';
+import HowToCreateAccount from '../Components/HowToCreateAccount';
+import PasswordResetInstructions from '../Components/PasswordResetInstructions';
+import AccountVerificationInstructions from '../Components/AccountVerificationInstructions';
+import HowToMakePayment from '../Components/HowToMakePayment';
+import RefundPolicy from '../Components/RefundPolicy';
+import DataSecurity from '../Components/DataSecurity';
+import TwoFactorAuthentication from '../Components/TwoFactorAuthentication';
+import ReportSecurityIssue from '../Components/ReportSecurityIssue';
 
 export const router = createBrowserRouter([
   {
@@ -115,6 +123,38 @@ export const router = createBrowserRouter([
         element:<PrivateRoute>
           <Dashboard></Dashboard>
         </PrivateRoute>
+      },
+      {
+        path:'/create-account',
+        element:<HowToCreateAccount></HowToCreateAccount>,
+      },
+      {
+        path:'/reset-password',
+        element:<PasswordResetInstructions></PasswordResetInstructions>
+      },
+      {
+        path: '/account-verification',
+        element: <AccountVerificationInstructions></AccountVerificationInstructions>
+      },
+      {
+        path:'/payment-method',
+        element: <HowToMakePayment></HowToMakePayment>
+      },
+      {
+        path:'/refund-policy',
+        element: <RefundPolicy></RefundPolicy>
+      },
+      {
+        path:'/data-security',
+        element: <DataSecurity></DataSecurity>
+      },
+      {
+        path:'/two-factor-authentication',
+        element: <TwoFactorAuthentication></TwoFactorAuthentication>
+      },
+      {
+        path:'/report',
+        element:<ReportSecurityIssue></ReportSecurityIssue>
       }
     ]
   },

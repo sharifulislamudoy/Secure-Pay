@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
 import toast from 'react-hot-toast';
+import { useNavigate } from 'react-router';
 
 const ContactUs = () => {
+
+  const navigate = useNavigate()
+
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -18,13 +22,18 @@ const ContactUs = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (formData.name && formData.email && formData.message) {
+    const { name, email, message } = formData;
+    if (name && email && message) {
       toast.success('Your message has been sent successfully!');
       setFormData({ name: '', email: '', message: '' });
+      navigate('/');
+      
     } else {
       toast.error('Please fill in all fields!');
     }
   };
+
+
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -78,7 +87,7 @@ const ContactUs = () => {
           </div>
 
           <div className="flex justify-center mt-6">
-            <button type="submit" className="btn btn-primary w-1/2">
+            <button  type="submit" className="btn btn-primary w-1/2">
               Send Message
             </button>
           </div>
