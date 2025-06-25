@@ -20,7 +20,6 @@
 
 🔗 **Check it out here:** [https://pay-c88ae.web.app/](https://pay-c88ae.web.app/)
 
-![SecurePay UI Preview](https://via.placeholder.com/1200x600.png?text=SecurePay+UI+Preview)
 
 ---
 
