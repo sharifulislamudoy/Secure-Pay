@@ -1,12 +1,68 @@
-# React + Vite
+<h1 align="center">
+  💳 SecurePay
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+<p align="center">
+  <b>A Secure, Sleek, and Scalable Authentication Platform</b><br />
+  Built with ❤️ using <code>React</code>, <code>Firebase</code>, <code>Tailwind CSS</code>, and <code>Framer Motion</code>
+</p>
 
-Currently, two official plugins are available:
+<p align="center">
+  🔐 <a href="https://pay-c88ae.web.app/" target="_blank"><b>Live Demo</b></a> &nbsp; • &nbsp;
+  🧑‍💻 <a href="#features"><b>Features</b></a> &nbsp; • &nbsp;
+  🛠️ <a href="#tech-stack"><b>Tech Stack</b></a> &nbsp; • &nbsp;
+  ⚙️ <a href="#running-locally"><b>Run Locally</b></a>
+</p>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🌐 Live Preview
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔗 **Check it out here:** [https://pay-c88ae.web.app/](https://pay-c88ae.web.app/)
+
+![SecurePay UI Preview](https://via.placeholder.com/1200x600.png?text=SecurePay+UI+Preview)
+
+---
+
+## ✨ Features
+
+✅ Firebase Authentication (Email/Password, Google, Facebook, GitHub)  
+✅ Beautiful UI with Tailwind & DaisyUI  
+✅ Secure Private Routes & Auth Context  
+✅ Animated components with Framer Motion  
+✅ Toast alerts, error handling, and loading states  
+✅ Dashboard with protected content  
+
+---
+
+## 🛠️ Tech Stack
+
+| Tech             | Description                            |
+|------------------|----------------------------------------|
+| ⚛️ React          | Frontend framework                     |
+| 🔐 Firebase       | Authentication & Hosting               |
+| 🎨 Tailwind CSS   | Utility-first CSS framework            |
+| 🌈 DaisyUI        | Tailwind CSS component library         |
+| 💫 Framer Motion | Animation library for React            |
+| 🎯 React Router   | SPA routing and navigation             |
+| 🔔 React Toastify | Toast notification system              |
+
+---
+
+## ⚙️ Running Locally
+
+### 🔧 Prerequisites
+
+Make sure you have the following installed:
+- Node.js (v18 or later)
+- npm (v9 or later)
+
+---
+
+### 📦 Step-by-Step Installation
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/your-username/securepay.git
+cd securepay
